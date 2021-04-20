@@ -3,16 +3,16 @@
 
         //Local Host
 
-        private static $dsn = 'mysql:host=localhost;dbname=zippyusedautos';
-        private static $username = 'root';
-        private static $password = '';
-        private static $db;
+        // private static $dsn = 'mysql:host=localhost;dbname=zippyusedautos';
+        // private static $username = 'root';
+        // private static $password = '';
+        // private static $db;
 
         // Heroku
-        // private static $dsn = 'mysql:host=pxukqohrckdfo4ty.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=ez2l6u3r54ymqutp';
-        // private static $username = 'p150fq4ifinpynp8';
-        // private static $password = 'exnepud0kjhji489';
-        // private static $db;
+        private static $dsn = 'mysql:host=pxukqohrckdfo4ty.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=ez2l6u3r54ymqutp';
+        private static $username = 'p150fq4ifinpynp8';
+        private static $password = 'exnepud0kjhji489';
+        private static $db;
 
 
         private function __construct() {}
