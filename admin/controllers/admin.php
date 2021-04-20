@@ -30,7 +30,7 @@
         case 'login':
             if (AdminDB::is_valid_admin_login($username, $password)) {
                 $_SESSION['is_valid_admin'] = true;
-                header("Location: .?action=list_vehicles");
+                header('Location:.?action=list_vehicles');
             } else {
                 $login_message = 'Incorrect Login / Login Required.';
                 $login_message_style = 'color: red;';

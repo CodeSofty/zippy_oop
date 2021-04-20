@@ -16,5 +16,5 @@ if(!empty($login_message)) { ?>
     <label for="password">Password:</label>
     <input type="text" name="password" id="password" autofocus required>
 
-    <input type="submit" value="login">
+    <input type="submit" value="Sign In">
 </form>

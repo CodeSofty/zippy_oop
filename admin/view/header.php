@@ -1,4 +1,4 @@
-<?php  ?> 
+<?php require_once('util/valid_admin.php'); ?> 
 
 <!DOCTYPE html>
 <html lang="en">
