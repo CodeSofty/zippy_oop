@@ -8,7 +8,7 @@ if(!empty($login_message)) { ?>
     <h2>Please fill in your credentials to login.</h2>
 <?php } ?>
 
-<form action = "." method="POST">
+<form action = "." method="post">
 <input type="hidden" name="action" value="login">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" autofocus required>
@@ -16,5 +16,5 @@ if(!empty($login_message)) { ?>
     <label for="password">Password:</label>
     <input type="text" name="password" id="password" autofocus required>
 
-    <input type="submit" value="Sign In">
+    <input type="submit" value="login">
 </form>

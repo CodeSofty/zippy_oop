@@ -42,6 +42,16 @@
             break;
         case 'show_login':
             include('view/login.php');
+            break;
+
+
+        default: 
+        $vehicles = VehiclesDB::get_vehicles_by_class($class_id, $order);
+        $makes = MakeDB::get_makes();
+        $types = TypesDB::get_types();
+        $classes = ClassesDB::get_classes();
+        include('./view/vehicle_list.php'); 
+        break;
     }
 
 ?>

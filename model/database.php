@@ -1,9 +1,18 @@
 <?php
     class Database {
-        private static $dsn = 'mysql:host=g84t6zfpijzwx08q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=zsoacbo8t52k0we8';
-        private static $username = 'um65gkttlf3d0tct';
-        private static $password = 't0q4zhu1m9wz3yio';
+
+        //Local Host
+
+        private static $dsn = 'mysql:host=localhost;dbname=zippyusedautos';
+        private static $username = 'root';
+        private static $password = '';
         private static $db;
+
+        // Heroku
+        // private static $dsn = 'mysql:host=pxukqohrckdfo4ty.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=ez2l6u3r54ymqutp';
+        // private static $username = 'p150fq4ifinpynp8';
+        // private static $password = 'exnepud0kjhji489';
+        // private static $db;
 
 
         private function __construct() {}
@@ -24,31 +33,4 @@
             return self::$db;
         }
 
-    }
-
-
-
-
-// Local Host
-    // $dsn = 'mysql:host=g84t6zfpijzwx08q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=zsoacbo8t52k0we8';
-    // $username = 'um65gkttlf3d0tct';
-    // $password = 't0q4zhu1m9wz3yio';
-
-
-    //Old Heroku
-
-    // $dsn = 'mysql:host=dt3bgg3gu6nqye5f.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=qg5x767ae80na8fk';
-    // $username = 'swy15zsjmy8cb2f1';
-    // $password = 'tzyfvmzyo70ieubf';
-
-    // try
-    // {
-    //     $db = new PDO($dsn,$username,$password);
-    // } catch (PDOException $e)
-    // {
-    //     $error = "Database error: ";
-    //     $error .= $e -> getMessage();
-    //     include('view/error.php');
-    //     exit();
-    // }
-    
+    }    

@@ -3,7 +3,7 @@ include('view/header.php');
 ?>
 
 <h2>Register a new admin user</h2>
-<div class="container">
+<!-- <div class="container"> -->
 <?php if(!empty($errors)) { ?>
     <ul>
     <?php for($i=0; $i<count($errors); $i++) {
@@ -37,7 +37,6 @@ include('view/header.php');
 
 
 <?php
-
 
 include('view/footer.php');
 
