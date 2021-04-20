@@ -1,6 +1,3 @@
-<script>alert("hit")</script>
-
-
 <?php 
 $lifetime = 60 * 60 * 24 * 7; //one week
 session_set_cookie_params($lifetime, '/');
@@ -58,13 +55,10 @@ $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
 
 if(!$action) {
     $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+    if(!$action) {
+        $action = "list_vehicles";
+    }
 }
-
-
-
-if(!$action) {
-    $action = "list_vehicles";
-} 
 
 if($action == "login" || $action == "show_login" || $action == "register" || $action == "show_register" || $action == "logout"){
     include('controllers/admin.php');

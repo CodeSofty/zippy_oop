@@ -61,36 +61,36 @@ switch($action) {
 // Actions
 
     case "list_vehicles":
-        $vehicles = get_vehicles();
-        $makes = get_makes();
-        $types = get_types();
-        $classes = get_classes();
+        $vehicles = VehiclesDB::get_vehicles();
+        $makes = MakeDB::get_makes();
+        $types = TypesDB::get_types();
+        $classes = ClassesDB::get_classes();
         include('view/vehicle_list.php');
         break;
 
     case "get_make":
-        $vehicles = get_vehicles_by_make($make_id);
-        $makes = get_makes();
-        $types = get_types();
-        $classes = get_classes();
+        $vehicles = VehiclesDB::get_vehicles_by_make($make_id);
+        $makes = MakeDB::get_makes();
+        $types = TypesDB::get_types();
+        $classes = ClassesDB::get_classes();
         include('view/vehicle_list.php');
         break;
 
 
         case "get_class":
-        $vehicles = get_vehicles_by_class($class_id);
-        $makes = get_makes();
-        $types = get_types();
-        $classes = get_classes();
+        $vehicles = VehiclesDB::get_vehicles_by_class($class_id);
+        $makes = MakeDB::get_makes();
+        $types = TypesDB::get_types();
+        $classes = ClassesDB::get_classes();
         include('view/vehicle_list.php');
         break;
 
 
         case "get_type": 
-        $vehicles = get_vehicles_by_type($type_id);
-        $makes = get_makes();
-        $types = get_types();
-        $classes = get_classes();
+        $vehicles = VehiclesDB::get_vehicles_by_type($type_id);
+        $makes = MakeDB::get_makes();
+        $types = TypesDB::get_types();
+        $classes = ClassesDB::get_classes();
         include('view/vehicle_list.php');
         break;
 
@@ -107,10 +107,10 @@ switch($action) {
 
 // List All Vehicles if no Action is Sent
     default:
-            $vehicles = get_vehicles();
-            $makes = get_makes();
-            $types = get_types();
-            $classes = get_classes();
+            $vehicles = VehiclesDB::get_vehicles();
+            $makes = MakeDB::get_makes();
+            $types = TypesDB::get_types();
+            $classes = ClassesDB::get_classes();
             include('view/vehicle_list.php');
 }
 

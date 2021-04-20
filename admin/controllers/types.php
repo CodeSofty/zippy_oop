@@ -5,13 +5,13 @@
 switch($action) {
 
     case "list_types":
-        $types = get_types();
+        $types = TypesDB::get_types();
         include('view/type_list.php');
         break;
 
     case "add_type": 
         try {
-        add_type($type_name);
+            TypesDB::add_type($type_name);
 
         }catch(PDOexception $e) {
             $e.showMessage();
@@ -25,7 +25,7 @@ switch($action) {
     case "delete_type":
         if($type_id) {
             try{
-                delete_type($type_id);
+                TypesDB::delete_type($type_id);
             }catch(PDOexception $e) {
                 $e.showMessage();
                 $message = "type_id is not valid, cannot delete without a valid type_id";
@@ -38,10 +38,10 @@ switch($action) {
         break;
 
     case "get_type": 
-        $vehicles = get_vehicles_by_type($type_id);
-        $makes = get_makes();
-        $types = get_types();
-        $classes = get_classes();
+        $vehicles = VehiclesDB::get_vehicles_by_type($type_id);
+        $makes = MakeDB::get_makes();
+        $types = TypesDB::get_types();
+        $classes = ClassesDB::get_classes();
         include('view/vehicle_list.php');
     break;
     
