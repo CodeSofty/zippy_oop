@@ -6,7 +6,7 @@
         // private static $dsn = 'mysql:host=localhost;dbname=zippyusedautos';
         // private static $username = 'root';
         // private static $password = '';
-        // private static $db;
+        // private static $db; 
 
         // Heroku
         private static $dsn = 'mysql:host=pxukqohrckdfo4ty.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=ez2l6u3r54ymqutp';
